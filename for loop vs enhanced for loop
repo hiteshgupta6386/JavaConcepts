@@ -1,0 +1,59 @@
+Difference between for loop and enhanced for loop (for-each) in Java:
+
+1. Traditional for Loop
+
+Syntax:
+for (int i = 0; i < arr.length; i++) {
+    System.out.println(arr[i]);
+}
+
+Key Points:
+a) Uses index (i)
+b) Full control over loop:
+      i) Forward / backward
+     ii) Skip elements (i += 2)
+c) Can modify elements
+d) Works with arrays and collections
+
+
+2. Enhanced for Loop (for-each loop)
+
+Syntax:
+for (int num : arr) {
+    System.out.println(num);
+}
+
+Key Points:
+a) No index, directly accesses elements
+b) Cleaner and more readable
+c) Internally uses iterator
+d) Mainly for read-only traversal
+
+Differences in both:
+
+Feature              Traditional for Loop              Enhanced for Loop
+Syntax complexity	            More	                          Simple
+Index access	                Yes	                              No
+Modify elements	              Yes	                        No (only copy)
+Reverse iteration	            Yes	                              No
+Step control (i+=2)	          Yes	                              No
+Readability	                Moderate	                         High
+Best use case	            Complex logic	                 Simple traversal
+
+
+Important Example: 
+
+Enhanced loop cannot modify original array:
+for (int num : arr) {
+    num = num * 2; // Won’t update original array
+}
+
+Traditional loop can modify original array:
+for (int i = 0; i < arr.length; i++) {
+    arr[i] = arr[i] * 2;
+}
+
+
+When to Use What:
+i) Use enhanced for loop → when you only need to read data
+ii) Use for loop → when you need index or modification
