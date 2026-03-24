@@ -31,14 +31,14 @@ d) Mainly for read-only traversal
 
 Differences in both:
 
-Feature              Traditional for Loop              Enhanced for Loop
-Syntax complexity	            More	                          Simple
-Index access	                Yes	                              No
-Modify elements	              Yes	                        No (only copy)
-Reverse iteration	            Yes	                              No
-Step control (i+=2)	          Yes	                              No
-Readability	                Moderate	                         High
-Best use case	            Complex logic	                 Simple traversal
+Feature                Traditional for Loop              Enhanced for Loop
+Syntax complexity	            More	                        Simple
+Index access	                Yes	                             No
+Modify elements	                Yes	                         No (only copy)
+Reverse iteration	            Yes	                             No
+Step control (i+=2)	            Yes	                             No
+Readability	                 Moderate	                         High
+Best use case	           Complex logic	                 Simple traversal
 
 
 Important Example: 
