@@ -1,0 +1,24 @@
+Write a Java 8 program to find the frequency of each element in an array or a list using streams and collectors.
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
+public class WordFrequency {
+    public static void main(String[] args){
+        List<String> names = Arrays.asList("rohit", "urmila", "rohit", "urmila", "ram", "sham", "sita", "gita");
+
+        Map<String, Long> map = names.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        System.out.println(map);
+
+    }
+}
+
+
+O/P:
+
+{sham=1, sita=1, rohit=2, urmila=2, gita=1, ram=1}
+
