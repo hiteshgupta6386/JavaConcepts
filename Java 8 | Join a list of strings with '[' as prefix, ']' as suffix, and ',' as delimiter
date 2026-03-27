@@ -1,0 +1,21 @@
+Given a list of strings, write a Java 8 program to join the strings with '[' as a prefix, ']' as a suffix, and ',' as a delimiter.
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class JoiningListOfStrings {
+    public static void main(String[] args){
+        List<String> inputList = Arrays.asList("rohit", "urmila", "rohit", "urmila", "ram", "sham", "sita", "gita");
+
+        String output = inputList.stream().collect(Collectors.joining(",", "[", "]"));
+
+        System.out.println(output);
+
+    }
+}
+
+
+O/P:
+
+[rohit,urmila,rohit,urmila,ram,sham,sita,gita]
