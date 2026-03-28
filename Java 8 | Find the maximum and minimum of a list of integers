@@ -5,7 +5,7 @@ import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MultipleOf5 {
+public class MinMaxFromList {
     public static void main(String[] args){
         List<Integer> num = Arrays.asList(12, 32, 2, 4, 777, 5, 32, 890, 422, 44, 99, 43);
 
