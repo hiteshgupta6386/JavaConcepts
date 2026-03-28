@@ -1,0 +1,26 @@
+Given a list of integers, write a Java 8 program to find the maximum and minimum numbers in the list.
+
+import java.util.Arrays;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MultipleOf5 {
+    public static void main(String[] args){
+        List<Integer> num = Arrays.asList(12, 32, 2, 4, 777, 5, 32, 890, 422, 44, 99, 43);
+
+        IntSummaryStatistics intSummaryStatistics = num.stream().collect(Collectors.summarizingInt(Integer::intValue));
+
+        System.out.println(intSummaryStatistics);
+        System.out.println(intSummaryStatistics.getMax());
+        System.out.println(intSummaryStatistics.getMin());
+
+    }
+}
+
+
+O/P:
+
+IntSummaryStatistics{count=12, sum=2362, min=2, average=196.833333, max=890}
+890
+2
