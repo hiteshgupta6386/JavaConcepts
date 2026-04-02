@@ -1,0 +1,26 @@
+Write a Java 8 program to check if two strings are anagrams or not using the stream API and lambda expressions.
+
+
+Traditional Code:
+
+import java.util.Arrays;
+
+public class Demo {
+    public static void main(String[] args){
+        char[] arr1 = "listen".toCharArray();
+        char[] arr2 = "silent".toCharArray();
+
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+        if(Arrays.equals(arr1, arr2)){
+            System.out.println("is Anagram");
+        }else{
+            System.out.println("is not Anagram");
+        }
+    }
+}
+
+
+O/P:
+is Anagram
