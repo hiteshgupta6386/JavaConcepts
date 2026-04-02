@@ -28,3 +28,28 @@ is Anagram
 
 Java 8:
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class Demo {
+    public static void main(String[] args){
+        String str1 = "listen";
+        String str2 = "silent";
+
+        String join1 = Arrays.stream(str1.split("")).sorted().collect(Collectors.joining(""));
+
+        String join2 = Arrays.stream(str2.split("")).sorted().collect(Collectors.joining(""));
+
+        if(join1.equals(join2)){
+            System.out.println("is Anagram");
+        }else{
+            System.out.println("is not Anagram");
+        }
+    }
+}
+
+
+O/P:
+
+is Anagram
+
