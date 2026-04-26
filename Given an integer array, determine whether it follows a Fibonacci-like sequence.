@@ -1,0 +1,38 @@
+Given an integer array, determine whether it follows a Fibonacci-like sequence.
+If the array follows a Fibonacci sequence, the method should return 1; otherwise, return 0.
+Based on the method's return value, print whether it is a Fibonacci series or not.
+
+
+Solution:
+
+class Main {
+
+    static int isFab(int[] arr) {
+
+        if (arr.length < 3) return 0;
+
+        for (int i = 2; i < arr.length; i++) {
+            if (arr[i] != arr[i - 1] + arr[i - 2]) {
+                return 0;
+            }
+        }
+        return 1;
+    }
+
+    public static void main(String[] args) {
+
+        int[] arr = {1, 2, 3, 5, 8}; 
+
+        int result = isFab(arr);
+
+        if (result == 1) {
+            System.out.println("fab series");
+        } else {
+            System.out.println("non fab series");
+        }
+    }
+}
+
+O/P:
+
+fab series
